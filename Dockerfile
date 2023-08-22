@@ -32,7 +32,6 @@
 #ENTRYPOINT ["java","-jar","/app.jar"]
 
 #Docker Image
-FROM openjdk:17
-WORKDIR /tmp
-COPY ./target/demo-0.0.1-SNAPSHOT.jar /app
-ENTRYPOINT ["java","OtpApplication"]
+FROM openjdk:20
+ADD ./demo-0.0.1-SNAPSHOT.jar  demo-0.0.1-SNAPSHOT.jar
+ENTRYPOINT ["java","-jar","demo-0.0.1-SNAPSHOT.jar"]
